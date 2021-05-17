@@ -12,8 +12,10 @@
 #
 import os
 import sys
+import torch_ort
 sys.path.insert(0, os.path.abspath('../../torch_ort'))
 sys.setrecursionlimit(1500)
+
 
 
 # -- Project information -----------------------------------------------------
