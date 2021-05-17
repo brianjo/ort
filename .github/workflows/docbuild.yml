@@ -17,7 +17,11 @@ jobs:
         python3 -m pip install --upgrade pip
         python3 -m pip install setuptools
         python3 -m pip install -r requirements.txt
+        python3 -m pip install ninja
+        python3 -m pip install torch==1.8.1
+        python3 -m pip install --pre onnxruntime-training -f https://onnxruntimepackages.z14.web.core.windows.net/onnxruntime_nightly_cu102.html
         python3 -m pip install torch-ort
+
       id: build
     - name: Build the docset
       run: |
