@@ -10,9 +10,7 @@ Welcome to ONNX Runtime's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   torch_ort
-   modules
-   setup
+
 
 Indices and tables
 ==================
