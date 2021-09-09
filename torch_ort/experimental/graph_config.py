@@ -1,3 +1,8 @@
+# -------------------------------------------------------------------------
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License.
+# --------------------------------------------------------------------------
+
 from enum import Enum
 from onnxruntime.capi._pybind_state import PropagateCastOpsStrategy
 from torch_ort import ORTModule
@@ -59,5 +64,5 @@ def set_propagate_cast_ops_optimization(model: ORTModule,
 
     # Set flags for both eval and training mode
     for mode in [True, False]:
-        model._execution_manager(is_training=mode)._propagate_cast_ops_strategy = strategy
-        model._execution_manager(is_training=mode)._propagate_cast_ops_level = level
+        model._torch_module._execution_manager(is_training=mode)._propagate_cast_ops_strategy = strategy
+        model._torch_module._execution_manager(is_training=mode)._propagate_cast_ops_level = level

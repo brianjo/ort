@@ -377,10 +377,6 @@ def main():
     if not args.pytorch_only:
         model = ORTModule(model)
 
-    # TODO: change it to False to stop saving ONNX models
-    model._save_onnx = True
-    model._save_onnx_prefix = 'BertForSequenceClassification'
-
     # Tell pytorch to run this model on the GPU.
     if torch.cuda.is_available() and not args.no_cuda:
         model.cuda()

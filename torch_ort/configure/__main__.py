@@ -3,7 +3,9 @@
 # Licensed under the MIT License.
 # --------------------------------------------------------------------------
 
-"""Experimental APIs for ORTModule
+def main():
+    from onnxruntime.training.ortmodule.torch_cpp_extensions import install as ortmodule_install
+    ortmodule_install.build_torch_cpp_extensions()
 
-DO NOT use these APIs for any production code as they can be removed at any time
-"""
+if __name__ == '__main__':
+    main()
